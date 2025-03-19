@@ -1,0 +1,10 @@
+[{
+  "_id": {
+    "$oid": "67c8b67789817e7be56e877b"
+  },
+  "copy_id": "copy_101",
+  "libro": "Cien años de soledad",
+  "fecha_prestamo": "2025-03-02",
+  "fecha_devolucion": "2025-03-16",
+  "estado": "active"
+}]
