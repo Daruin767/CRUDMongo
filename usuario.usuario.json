@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "67c8b58789817e7be56e8779"
+  },
+  "nombre": "Juan Pérez",
+  "email": "juan@example.com",
+  "telefono": "555-1234",
+  "prestamos_activos": {
+    "libro": "Cien años de soledad",
+    "fecha_prestamo": "2025-03-02",
+    "fecha_devolucion": "2025-03-16",
+    "reseña": "El libro está en buen estado y la historia es fascinante."
+  },
+  "reservas_activas": {
+    "reserva_id": "res_5001",
+    "libro": "1984",
+    "fecha_reserva": {
+      "$date": "2025-03-01T00:00:00.000Z"
+    },
+    "expira": {
+      "$date": "2025-03-03T00:00:00.000Z"
+    }
+  }
+}]
