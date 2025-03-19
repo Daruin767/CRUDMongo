@@ -1,0 +1,14 @@
+[{
+  "_id": {
+    "$oid": "67c8b62589817e7be56e877a"
+  },
+  "titulo": "Cien años de soledad",
+  "autor": "Gabriel García Márquez",
+  "isbn": "978-84-376-0494-7",
+  "cantidad_ejemplares": 5,
+  "ejemplares_disponibles": 2,
+  "ejemplares": {
+    "estado": "borrowed",
+    "ubicacion": "Estantería A3"
+  }
+}]
