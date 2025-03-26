@@ -1,11 +1,15 @@
-from pymongo import MongoClient
-
-MONGO_URI = 'mongodb://localhost:27017/'
+import mysql.connector
+from mysql.connector import Error
 
 def dbConnection():
     try:
-        client = MongoClient(MONGO_URI)
-        db = client["dbb_products_app"]
-    except ConnectionError:
-        print('Error de conexión con la bdd')
-    return db
+        Connection = mysql.connector.connect(
+            host='localhost',
+            user='root',
+            password='',
+            database='biblioteca'
+        )
+        return Connection
+    except mysql.connector.Error as err:
+        print(f'Error de conexión con la base de datos: {err}')
+        return None
