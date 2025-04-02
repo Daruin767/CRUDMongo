@@ -39,8 +39,7 @@ Paquetes PIP
 
 ![Imagen1](https://github.com/user-attachments/assets/15b100f1-4f95-43bb-9af5-b36d97c257b5)
 
-## Diagrama de casos de uso:
-![image](https://github.com/user-attachments/assets/9c150546-1b69-4872-929e-36b5cbcdc998)
+
 
 
 ## 📖 Diseño de la Base de Datos
