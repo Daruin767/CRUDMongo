@@ -16,6 +16,12 @@ PyMongo (conector a MongoDB): pip install pymongo
 
 MongoDB (base de datos): Instalado localmente en el puerto 27017
 
+
+## Estructura del proyecto
+
+![image](https://github.com/user-attachments/assets/ac21ab2e-a3bc-42db-ac4d-181c5bd3c972)
+
+
 ## Diagrama de casos de uso
 
 ![image](https://github.com/user-attachments/assets/1831fad5-7a99-421a-ba77-6cab656e3ece)
