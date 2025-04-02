@@ -1,36 +1,77 @@
 📚 Sistema de Gestión de Biblioteca con Flask y MongoDB 🚀
 
+Tecnologías instaladas requeridas
+
+Para que este sistema funcione, se necesitan las siguientes instalaciones:
+
+Python (como lenguaje base)
+
+Flask (framework web): pip install flask
+
+PyMongo (conector a MongoDB): pip install pymongo
+
+MongoDB (base de datos): Instalado localmente en el puerto 27017
+
+
 🌟 Descripción del Proyecto
+
 Este sistema ofrece una solución integral para la administración de bibliotecas, permitiendo un control eficiente de libros, usuarios y préstamos. Gracias a una interfaz web desarrollada con Flask y el almacenamiento en MongoDB, la gestión se vuelve rápida, organizada y accesible desde cualquier dispositivo.
 ________________________________________
 🔹 Componentes Principales
+
 📂 Modelos de Datos
+
 1.	📖 Product (Producto): Representa los libros disponibles en la biblioteca, incluyendo:
+   
 o	📌 Nombre del libro
 o	✍️ Autor
 o	📚 Ejemplares disponibles
+
 2.	👤 User (Usuario): Gestiona la información de los miembros de la biblioteca:
+   
 o	🏷️ Nombre del usuario
 o	✉️ Correo electrónico
 o	📞 Número de teléfono
+
 3.	🔄 Loan (Préstamo): Controla los préstamos realizados, almacenando:
+   
 o	👤 Usuario asociado
 o	📖 Producto prestado
 o	📅 Fecha del préstamo
 ________________________________________
 ⚡ Funcionalidades Implementadas
+
 📚 Para Productos (Libros)
-✅ Creación: Añadir nuevos libros al catálogo. ✅ Edición: Modificar detalles de libros existentes. ✅ Eliminación: Retirar libros del sistema. ✅ Listado: Visualizar todos los libros disponibles.
+
+✅ Creación: Añadir nuevos libros al catálogo. 
+✅ Edición: Modificar detalles de libros existentes. 
+✅ Eliminación: Retirar libros del sistema. 
+✅ Listado: Visualizar todos los libros disponibles.
+
 👥 Para Usuarios
-✅ Registro: Agregar nuevos miembros a la biblioteca. ✅ Actualización: Editar la información de los usuarios. ✅ Borrado: Eliminar usuarios. ✅ Consulta: Ver la lista completa de usuarios registrados.
+
+✅ Registro: Agregar nuevos miembros a la biblioteca.
+✅ Actualización: Editar la información de los usuarios. 
+✅ Borrado: Eliminar usuarios. 
+✅ Consulta: Ver la lista completa de usuarios registrados.
+
 🔄 Para Préstamos
-✅ Creación: Registrar nuevos préstamos. ✅ Modificación: Actualizar fechas de préstamos. ✅ Cancelación: Eliminar registros de préstamos. ✅ Visualización: Consultar préstamos activos.
+
+✅ Creación: Registrar nuevos préstamos. 
+✅ Modificación: Actualizar fechas de préstamos. 
+✅ Cancelación: Eliminar registros de préstamos.
+✅ Visualización: Consultar préstamos activos.
 ________________________________________
 🏗️ Arquitectura Técnica
+
 🔧 Backend
+
 •	💻 Desarrollado en Python con el framework Flask.
+
 •	🔀 Sistema de rutas para manejar operaciones CRUD (Crear, Leer, Actualizar, Eliminar).
+
 •	📌 Implementación del patrón MVC (Modelo-Vista-Controlador) para mantener una arquitectura bien organizada.
+
 🗄️ Base de Datos
 •	💾 MongoDB como sistema de almacenamiento principal.
 •	📂 Tres colecciones principales:
