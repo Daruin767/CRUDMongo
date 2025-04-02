@@ -1,4 +1,5 @@
 📚 Sistema de Gestión de Biblioteca con Flask y MongoDB 🚀
+
 🌟 Descripción del Proyecto
 Este sistema ofrece una solución integral para la administración de bibliotecas, permitiendo un control eficiente de libros, usuarios y préstamos. Gracias a una interfaz web desarrollada con Flask y el almacenamiento en MongoDB, la gestión se vuelve rápida, organizada y accesible desde cualquier dispositivo.
 ________________________________________
@@ -43,7 +44,11 @@ ________________________________________
 •	🔌 Uso de PyMongo, el driver oficial para interactuar con MongoDB.
 ________________________________________
 🔄 Flujo de la Aplicación
-1️⃣ El usuario accede a la interfaz principal (index.html). 2️⃣ Navega entre las diferentes secciones (productos, usuarios, préstamos). 3️⃣ Realiza operaciones a través de formularios web. 4️⃣ Flask procesa las solicitudes y actualiza MongoDB. 5️⃣ Los cambios se reflejan inmediatamente en la interfaz.
+1️⃣ El usuario accede a la interfaz principal (index.html).
+2️⃣ Navega entre las diferentes secciones (productos, usuarios, préstamos). 
+3️⃣ Realiza operaciones a través de formularios web.
+4️⃣ Flask procesa las solicitudes y actualiza MongoDB.
+5️⃣ Los cambios se reflejan inmediatamente en la interfaz.
 ________________________________________
 📁 Estructura de Archivos
 1.	app.py
