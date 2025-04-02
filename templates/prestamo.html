@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Préstamos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body class="bg-light">
+    <div class="container py-4">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+                <h1 class="h4 mb-0"><i class="bi bi-book"></i> Gestión de Préstamos</h1>
+            </div>
+            
+            <div class="card-body">
+                <nav class="nav nav-pills mb-4">
+                    <a class="nav-link" href="{{ url_for('home') }}">Productos</a>
+                    <a class="nav-link" href="{{ url_for('view_users') }}">Usuarios</a>
+                    <a class="nav-link active" href="{{ url_for('view_loans') }}">Préstamos</a>
+                </nav>
+
+                <div class="mb-4 p-3 border rounded bg-white">
+                    <h2 class="h5 mb-3"><i class="bi bi-plus-circle"></i> Registrar Nuevo Préstamo</h2>
+                    <form action="/prestamo" method="POST" class="row g-3">
+                        <div class="col-md-3">
+                            <input type="text" class="form-control" name="user-name" placeholder="Nombre del usuario" required>
+                        </div>
+                        <div class="col-md-3">
+                            <input type="text" class="form-control" name="book-name" placeholder="Título del libro" required>
+                        </div>
+                        <div class="col-md-2">
+                            <input type="date" class="form-control" name="loan-date" required>
+                        </div>
+                        <div class="col-md-2">
+                            <input type="date" class="form-control" name="return-date" required>
+                        </div>
+                        <div class="col-md-2">
+                            <button type="submit" class="btn btn-primary w-100"><i class="bi bi-save"></i> Guardar</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="table-responsive">
+                    <h2 class="h5 mb-3"><i class="bi bi-list-ul"></i> Listado de Préstamos</h2>
+                    <form action="/update-multiple-loans" method="POST">
+                        <table class="table table-striped table-hover table-bordered">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Usuario</th>
+                                    <th>Libro</th>
+                                    <th>Fecha Préstamo</th>
+                                    <th>Fecha Devolución</th>
+                                    <th class="text-center">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for loan in loans %}
+                                <tr>
+                                    <td><input type="text" class="form-control form-control-sm" name="user_name_{{ loan._id }}" value="{{ loan.user_name }}" required></td>
+                                    <td><input type="text" class="form-control form-control-sm" name="book_name_{{ loan._id }}" value="{{ loan.book_name }}" required></td>
+                                    <td><input type="date" class="form-control form-control-sm" name="loan_date_{{ loan._id }}" value="{{ loan.loan_date }}" required></td>
+                                    <td><input type="date" class="form-control form-control-sm" name="return_date_{{ loan._id }}" value="{{ loan.return_date }}" required></td>
+                                    <td class="text-center">
+                                        <!-- <button type="submit" formaction="/update-loan/{{ loan._id }}" class="btn btn-sm btn-success me-1"><i class="bi bi-check"></i></button> -->
+                                        <a href="/delete-loan/{{ loan._id }}" class="btn btn-sm btn-danger" onclick="return confirm('¿Eliminar este préstamo?')"><i class="bi bi-trash"></i></a>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                        <button type="submit" class="btn btn-primary mt-3"><i class="bi bi-save-all"></i> Guardar Todos los Cambios</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="card-footer text-muted small">
+                Sistema de Gestión de Biblioteca
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
