@@ -14,7 +14,6 @@ Flask (framework web): pip install flask
 
 PyMongo (conector a MongoDB): pip install pymongo
 
-MongoDB (base de datos): Instalado localmente en el puerto 27017
 
 
 ## Estructura del proyecto
